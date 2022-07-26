@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Separator from './components/Separator/Separator'
 import Stars from './components/Stars/Stars';
+import Listing from './components/Listing/Listing';
+import {etsy} from './data/etsy.js';
 
 function App() {
 
@@ -21,14 +23,15 @@ function App() {
           </div>
       </div>
       <Separator/>
-      <div className='task-2' id='task-2'>
+      <div className = 'task-2' id = 'task-2'>
         <h2>Задание 2. "Список предложений"</h2>
+          <Listing items = {etsy}/>
       </div>
       <Separator/>
-      <div className='task-3' id='task-3'>
+      {/* <div className='task-3' id='task-3'>
         <h2>Задание 3. "История сообщений в чате"</h2>
       </div>
-      <Separator/>
+      <Separator/> */}
     </div>
   );
 }
