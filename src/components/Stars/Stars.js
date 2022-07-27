@@ -8,7 +8,7 @@ function Stars(props) {
     const stars = !Number.isNaN(count)
                 && (count > 0) 
                 && (count < 6) 
-                && <ul className='card-body-stars'>{[1, 2, 3, 4, 5].filter((item) => item <= count).map((item, index) => <Star key={index}/>)}</ul>
+                && <ul className='card-body-stars'>{Array(count).fill(count).map((item, index) => <Star key={index}/>)}</ul>
   return (
     <>
         {stars}
