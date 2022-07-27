@@ -3,7 +3,9 @@ import './App.css';
 import Separator from './components/Separator/Separator'
 import Stars from './components/Stars/Stars';
 import Listing from './components/Listing/Listing';
-import {etsy} from './data/etsy.js';
+import {etsy} from './data/etsy';
+import {messages} from './data/Messages';
+import MessageHistory from './components/MessageHistory/MessageHistory';
 
 function App() {
 
@@ -28,12 +30,20 @@ function App() {
           <Listing items = {etsy}/>
       </div>
       <Separator/>
-      {/* <div className='task-3' id='task-3'>
+      <div className='task-3' id='task-3'>
         <h2>Задание 3. "История сообщений в чате"</h2>
+          <div className="clearfix container">
+            <div className="chat">
+              <div className="chat-history">
+                <MessageHistory list={messages} />
+              </div>
+            </div>  
+          </div>
       </div>
-      <Separator/> */}
+      <Separator/>
     </div>
   );
 }
+
 
 export default App;
